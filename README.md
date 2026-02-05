@@ -1,15 +1,15 @@
-# 🛡️ AI Internal Audit Agent  
+# 🛡️ AI Internal Audit Agent
 ### Autonomous, Policy-Aware Financial Compliance for the AI Era
 
-[![Live Demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ai-audit-agent-4roq5eor4h4cjd8cr9pb6b.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ai-audit-agent-4roq5eor4h4cjd8cr9pb6b.streamlit.app/)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![LLM](https://img.shields.io/badge/LLM-Gemini%202.0%20Flash-4285F4)
-![Framework](https://img.shields.io/badge/Framework-LangChain-green)
-![Vector DB](https://img.shields.io/badge/Vector%20DB-FAISS-orange)
+![Gemini](https://img.shields.io/badge/AI-Gemini%202.0%20Flash-4285F4)
+![LangChain](https://img.shields.io/badge/Framework-LangChain-green)
+![FAISS](https://img.shields.io/badge/Vector_DB-FAISS-orange)
 
 ---
 
-## 🚀 Overview
+## 📋 Executive Summary
 
 The **AI Internal Audit Agent** is an **enterprise-grade, autonomous compliance system** that automates internal financial audits using **policy-grounded AI reasoning**.
 
@@ -17,7 +17,7 @@ Traditional audits are manual, slow, and reactive. This agent transforms auditin
 
 > A virtual internal auditor that never skips rules and always shows its reasoning.
 
-🔗 **Live App:** https://ai-audit-agent-4roq5eor4h4cjd8cr9pb6b.streamlit.app/
+🔗 **Live App:** [Click here to try the Live Demo](https://ai-audit-agent-4roq5eor4h4cjd8cr9pb6b.streamlit.app/)
 
 ---
 
@@ -33,7 +33,7 @@ This system embeds **policy intelligence directly into the transaction review pr
 
 ---
 
-## 🧠 System Architecture (RAG-Based)
+## 🏗️ System Architecture (RAG-Based)
 
 The agent follows a **Retrieval-Augmented Generation (RAG)** architecture to ensure **every decision is grounded in internal policy**, not general LLM knowledge.
 
@@ -74,8 +74,8 @@ The agent follows a **Retrieval-Augmented Generation (RAG)** architecture to ens
 ---
 
 ### 2️⃣ Data Integrity Check
-- Ledger Amount: $200  
-- Invoice Amount: $250  
+- Ledger Amount: $200
+- Invoice Amount: $250
 
 Mismatch detected → ❌ **VIOLATION**
 
@@ -99,16 +99,6 @@ Every decision is:
 
 ---
 
-## 🧑‍💼 Use Cases
-
-- Internal Audit Teams  
-- Finance & Compliance Departments  
-- ERP Pre-Validation Pipelines  
-- Continuous Audit Monitoring  
-- AI Governance Systems  
-
----
-
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
@@ -128,38 +118,37 @@ Every decision is:
 git clone [https://github.com/kdeepak2001/AI-Audit-Agent.git](https://github.com/kdeepak2001/AI-Audit-Agent.git)
 cd AI-Audit-Agent
 
-2️⃣ Install Dependencies
-Bash
+### 2️⃣ Install Dependencies
+```bash
 pip install -r requirements.txt
-3️⃣ Set API Key
-Bash
+
+### 3️⃣ Set API Key
+```bash
 export GOOGLE_API_KEY="your_api_key_here"
 
-4️⃣ Run Application
-Bash
+### 4️⃣ Run Application
+```bash
 streamlit run app.py
-🔮 Roadmap
+
+## 🔮 Roadmap
+
 Phase 2: Vision-based OCR for scanned invoices
-
 Phase 3: ERP integrations (SAP, Oracle NetSuite)
-
 Phase 4: Multi-language policy auditing
-
 Phase 5: Automated alerts and escalation workflows
 
-👤 Author & Contact
-K Deepak AI Engineer | Audit Automation | Applied LLM Systems
+## 👤 Author & Contact
 
-🌐 GitHub: www.github.com/kdeepak2001
+### 🌐 GitHub: github.com/kdeepak2001
 
-🔗 LinkedIn: www.linkedin.com/kalava-Deepak
+## 🔗 LinkedIn: linkedin.com/in/kalava-deepak
 
-📧 Email: kalavadeepak2001@gmail.com
+## 📧 Email: kalavadeepak2001@gmail.com
 
-📱 Mobile: +91-9502684256
+## 📱 Mobile: +91-9502684256
 
-🧠 Why This Project Matters
-This project demonstrates:
+## 🧠 Why This Project Matters
+### This project demonstrates:
 
 Responsible AI through policy grounding.
 
@@ -168,5 +157,4 @@ Explainable, deterministic decision-making.
 Enterprise-ready RAG architecture.
 
 Practical AI applied to real compliance problems.
-
 This is not a chatbot. This is an AI-powered audit system.
