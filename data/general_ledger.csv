@@ -1,0 +1,4 @@
+TransactionID,Date,Vendor,Amount,Currency,Approver,Description
+TXN-1000,2026-02-05,TechCorp Solutions,4500.0,USD,Bob Director,Server Maintenance
+TXN-1001,2026-02-04,Global Consultants,6000.0,USD,Bob Director,Strategy Audit
+TXN-1002,2026-02-03,Office Supplies Co,200.0,USD,Charlie Manager,Paper Supplies

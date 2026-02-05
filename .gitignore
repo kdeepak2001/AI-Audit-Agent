@@ -1,0 +1,12 @@
+# Ignore Virtual Environment
+venv/
+.env
+__pycache__/
+
+# Ignore Data (Optional, but good practice for real data)
+# We will keep dummy data for the demo, but ignore PDF generation cache
+*.pyc
+
+# Ignore Mac/Windows system files
+.DS_Store
+Thumbs.db

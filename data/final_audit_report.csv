@@ -1,0 +1,4 @@
+TransactionID,Status,AI_Decision
+TXN-1000,🟢 PASS,"COMPLIANT: The Invoice amount of $4500.00 matches the Ledger amount of $4500.0. Bob Director is authorized to approve expenses up to $5,000 USD (1.2)."
+TXN-1001,🔴 FLAG,"VIOLATION: 1.2 The Invoice amount of $6000.00 does match the Ledger amount of $6000.0. However, a Director is only authorized to approve expenses up to $5,000 USD. This expense exceeds the Director's approval limit."
+TXN-1002,🔴 FLAG,"VIOLATION:  1. DATA INTEGRITY: The Invoice amount ($250.00) does not match the Ledger amount ($200.00). This violates section 3.1. 2. COMPLIANCE: Charlie Manager approved an expense of $200.00, which is within their approval limit of $1,000.00. This complies with section 1.1. However, due to the data integrity issue, the entire transaction is non-compliant."
