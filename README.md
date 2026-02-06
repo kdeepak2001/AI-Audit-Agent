@@ -35,6 +35,10 @@ Manual auditing of warranty claims is slow, error-prone, and struggles with comp
 └── README.md              # Documentation
 
 ## 📂 Project Structure
+<<<<<<< HEAD
+=======
+## ⚙️ Installation & Setup
+>>>>>>> 0cac5a5880acf4fb7883bae167874cd443485fc7
 
 ### 1. Clone the Repository
 ```bash
