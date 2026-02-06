@@ -32,11 +32,10 @@ Manual auditing of warranty claims is slow, error-prone, and struggles with comp
 │   └── warranty_claims.csv # The "Test Data" (Ledger)
 └── README.md              # Documentation
 
-
 ⚙️ Installation & Setup
 1. Clone the Repository
 Bash
-git clone [https://github.com/YourUsername/Audit_Agent_Project.git](https://github.com/YourUsername/Audit_Agent_Project.git)
+git clone https://github.com/kdeepak2001/AI-Audit-Agent.git
 cd Audit_Agent_Project
 2. Install Dependencies
 Bash
@@ -88,15 +87,3 @@ Open to contributions! Please fork the repo and submit a PR.
 
 📄 License
 MIT License
-
-
----
-
-### **5. Save and Push (The Important Part)**
-
-Since Git thinks the file is "conflicted," you must explicitly tell it "I have fixed it." Run these commands in your terminal **one by one**:
-
-```bash
-git add README.md
-git commit -m "Fixed merge conflicts in README"
-git push origin main
