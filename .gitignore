@@ -2,7 +2,12 @@
 venv/
 .env
 __pycache__/
+# Streamlit secrets (Where the API Key is)
+.streamlit/
+secrets.toml
 
+# Vector Database (Local memory)
+vectordb/
 # Ignore Data (Optional, but good practice for real data)
 # We will keep dummy data for the demo, but ignore PDF generation cache
 *.pyc

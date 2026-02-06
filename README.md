@@ -1,160 +1,88 @@
-# 🛡️ AI Internal Audit Agent
-### Autonomous, Policy-Aware Financial Compliance for the AI Era
+# 🛡️ AI Internal Audit Agent (Axion Ray Prototype)
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ai-audit-agent-4roq5eor4h4cjd8cr9pb6b.streamlit.app/)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![Gemini](https://img.shields.io/badge/AI-Gemini%202.0%20Flash-4285F4)
-![LangChain](https://img.shields.io/badge/Framework-LangChain-green)
-![FAISS](https://img.shields.io/badge/Vector_DB-FAISS-orange)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+![AI Model](https://img.shields.io/badge/AI-Gemini%202.0%20Flash-orange)
+![Status](https://img.shields.io/badge/Status-Prototype-green)
 
----
+An automated **Compliance & Warranty Audit System** powered by Generative AI. This agent ingests unstructured policy documents (PDFs) and audits financial transactions (CSVs) in real-time, flagging violations with specific policy citations.
 
-## 📋 Executive Summary
 
-The **AI Internal Audit Agent** is an **enterprise-grade, autonomous compliance system** that automates internal financial audits using **policy-grounded AI reasoning**.
 
-Traditional audits are manual, slow, and reactive. This agent transforms auditing into a **real-time, explainable, and scalable process** by validating every transaction against official corporate policies using a **Retrieval-Augmented Generation (RAG)** architecture.
+## 🚀 Business Use Case
+Manual auditing of warranty claims is slow, error-prone, and struggles with complex logic (e.g., *"Tier 2 approval required for Turbochargers under 50k km"*).
 
-> A virtual internal auditor that never skips rules and always shows its reasoning.
-
-🔗 **Live App:** [Click here to try the Live Demo](https://ai-audit-agent-4roq5eor4h4cjd8cr9pb6b.streamlit.app/)
-
----
-
-## 🎯 Problem Statement
-
-Organizations face audit risks due to:
-- Manual approval checks
-- Inconsistent policy interpretation
-- Delayed violation detection
-- High operational audit costs
-
-This system embeds **policy intelligence directly into the transaction review process**, enabling continuous and automated audits.
-
----
-
-## 🏗️ System Architecture (RAG-Based)
-
-The agent follows a **Retrieval-Augmented Generation (RAG)** architecture to ensure **every decision is grounded in internal policy**, not general LLM knowledge.
-
-### 🔄 Data Flow
-
-1. **Policy Ingestion**
-   - Policy PDFs are chunked and embedded
-   - Stored in a local **FAISS vector database**
-
-2. **Transaction Input**
-   - General Ledger (CSV / Excel)
-   - Optional invoice text (PDF / OCR)
-
-3. **Policy Retrieval**
-   - Relevant policy sections are retrieved dynamically
-   - Example: *Director approval limits*
-
-4. **AI Reasoning**
-   - **Gemini 2.0 Flash** evaluates transactions against policy
-
-5. **Audit Output**
-   - Each transaction is labeled:
-     - ✅ `COMPLIANT`
-     - ❌ `VIOLATION`
-   - Results displayed and exportable
-
----
-
-## ✅ Core Audit Logic — The “3-Way Match”
-
-### 1️⃣ Policy Compliance Check
-**Input:** “A Director approved an invoice for $6,000.”
-
-**Retrieved Policy:** “Directors may approve invoices up to $5,000.”
-
-**Decision:** $6,000 > $5,000 → ❌ **VIOLATION**
-
----
-
-### 2️⃣ Data Integrity Check
-- Ledger Amount: $200
-- Invoice Amount: $250
-
-Mismatch detected → ❌ **VIOLATION**
-
----
-
-### 3️⃣ Explainability
-Every decision is:
-- Traceable to a policy clause
-- Numerically justified
-- Ready for audit review
-
----
-
-## ✨ Key Features
-
-- 📄 **Policy-Aware AI (No Hallucinations)**
-- 🔁 **Dynamic Policy Updates**
-- ⚡ **High-Speed Batch Auditing**
-- 🧩 **Multi-Modal Inputs**
-- 📊 **Interactive Streamlit Dashboard**
-
----
+**This AI Agent solves that by:**
+1.  **Ingesting** complex Policy Guidelines (PDF) dynamically.
+2.  **Analyzing** structured ledger data (CSV) row-by-row.
+3.  **Detecting** logic violations, banned parts, and authority limit breaches.
+4.  **Citing** the exact policy section (e.g., *"Violation: Section 4.2 Mineral Oil Prohibited"*).
 
 ## 🛠️ Tech Stack
+* **LLM Engine:** Google Gemini 2.0 Flash (`gemini-2.0-flash`)
+* **Orchestration:** LangChain (Prompt Templates, Chains)
+* **Frontend:** Streamlit (Real-time interactive UI)
+* **Data Processing:** Pandas (CSV handling), PyPDFLoader (PDF ingestion)
 
-| Layer | Technology |
-|------|-----------|
-| LLM | Google Gemini 2.0 Flash |
-| Framework | LangChain |
-| Vector Store | FAISS |
-| Frontend | Streamlit |
-| Language | Python 3.10+ |
-
----
-
-## ⚙️ Local Installation
-
-### 1️⃣ Clone Repository
+## 📂 Project Structure
 ```bash
-git clone [https://github.com/kdeepak2001/AI-Audit-Agent.git](https://github.com/kdeepak2001/AI-Audit-Agent.git)
-cd AI-Audit-Agent
+├── app.py                 # Main application interface (Streamlit)
+├── policy_engine.py       # AI Logic & LangChain integration
+├── requirements.txt       # Python dependencies
+├── data/
+│   ├── Company_Policy.pdf # The "Brain" (Warranty Rules)
+│   └── warranty_claims.csv # The "Test Data" (Ledger)
+└── README.md              # Documentation
 
-### 2️⃣ Install Dependencies
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/YourUsername/Audit_Agent_Project.git](https://github.com/YourUsername/Audit_Agent_Project.git)
+cd Audit_Agent_Project
+
+### Install Dependencies
 ```bash
 pip install -r requirements.txt
 
-### 3️⃣ Set API Key
-```bash
-export GOOGLE_API_KEY="your_api_key_here"
+### 3. Configure API Key
+* ** This project requires a Google Gemini API Key.
 
-### 4️⃣ Run Application
+* **Option A (Temporary): Enter the key directly in the sidebar UI.
+
+* **Option B (Secure - Recommended): Create a .streamlit/secrets.toml file:
+```bash
+GOOGLE_API_KEY = "your_api_key_here"
+
+* **4. Run the Agent
 ```bash
 streamlit run app.py
 
-## 🔮 Roadmap
+## ⚙️ Installation & Setup
+## 🧪 How to Test (Demo Scenario)
+This prototype is pre-configured with a **Powertrain Warranty Policy** (Section 4).
 
-Phase 2: Vision-based OCR for scanned invoices
-Phase 3: ERP integrations (SAP, Oracle NetSuite)
-Phase 4: Multi-language policy auditing
-Phase 5: Automated alerts and escalation workflows
+1.  **Launch the App.**
+2.  **Upload `warranty_claims.csv`** (found in the `data/` folder).
+3.  **Click "Run AI Audit".**
+4.  **Observe Results:**
+    * **CLM-001:** 🔴 **FLAGGED** (Turbocharger claim missing Tier 2 Approval).
+    * **CLM-002:** 🔴 **FLAGGED** (Usage of banned "Mineral Oil").
+    * **CLM-003:** 🔴 **FLAGGED** (Labor rate exceeds $120 cap).
+    * **CLM-004:** 🟢 **PASSED** (Routine maintenance).
 
-## 👤 Author & Contact
+## 🧠 AI Architecture
+Unlike standard chatbots, this system uses a **Context-Aware Inference** approach:
 
-### 🌐 GitHub: github.com/kdeepak2001
+1.  The system reads the raw text from `Company_Policy.pdf`.
+2.  It constructs a dynamic prompt injecting the **Policy Rules** as the "Ground Truth".
+3.  It iterates through the **CSV Ledger**, passing each transaction as a "Query".
+4.  The LLM acts as a strict auditor, returning a binary `VIOLATION` / `COMPLIANT` decision with reasoning.
 
-## 🔗 LinkedIn: linkedin.com/in/kalava-deepak
 
-## 📧 Email: kalavadeepak2001@gmail.com
 
-## 📱 Mobile: +91-9502684256
+## 🤝 Contributing
+Open to contributions! Please fork the repo and submit a PR.
 
-## 🧠 Why This Project Matters
-### This project demonstrates:
-
-Responsible AI through policy grounding.
-
-Explainable, deterministic decision-making.
-
-Enterprise-ready RAG architecture.
-
-Practical AI applied to real compliance problems.
-This is not a chatbot. This is an AI-powered audit system.
+## 📄 License
+MIT License
