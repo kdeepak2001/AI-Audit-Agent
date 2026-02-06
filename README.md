@@ -1,13 +1,11 @@
 # 🛡️ AI Internal Audit Agent (Axion Ray Prototype)
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
-![AI Model](https://img.shields.io/badge/AI-Gemini%202.0%20Flash-orange)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B)
+![AI Model](https://img.shields.io/badge/AI-Gemini%202.0%20Flash-4285F4)
 ![Status](https://img.shields.io/badge/Status-Prototype-green)
 
 An automated **Compliance & Warranty Audit System** powered by Generative AI. This agent ingests unstructured policy documents (PDFs) and audits financial transactions (CSVs) in real-time, flagging violations with specific policy citations.
-
-
 
 ## 🚀 Business Use Case
 Manual auditing of warranty claims is slow, error-prone, and struggles with complex logic (e.g., *"Tier 2 approval required for Turbochargers under 50k km"*).
@@ -34,59 +32,68 @@ Manual auditing of warranty claims is slow, error-prone, and struggles with comp
 │   └── warranty_claims.csv # The "Test Data" (Ledger)
 └── README.md              # Documentation
 
-## 📂 Project Structure
-<<<<<<< HEAD
-=======
 ## ⚙️ Installation & Setup
->>>>>>> 0cac5a5880acf4fb7883bae167874cd443485fc7
 
 ### 1. Clone the Repository
 ```bash
 git clone [https://github.com/YourUsername/Audit_Agent_Project.git](https://github.com/YourUsername/Audit_Agent_Project.git)
 cd Audit_Agent_Project
 
-### Install Dependencies
+### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
 
-### 3. Configure API Key
-* ** This project requires a Google Gemini API Key.
+## 3. Configure API Key
 
-* **Option A (Temporary): Enter the key directly in the sidebar UI.
+This project requires a **Google Gemini API Key**.
 
-* **Option B (Secure - Recommended): Create a .streamlit/secrets.toml file:
-```bash
+### Option A (Temporary)
+Enter the API key directly in the **sidebar UI**.
+
+### Option B (Secure – Recommended)
+Create a `.streamlit/secrets.toml` file in the project root:
+
+```toml
 GOOGLE_API_KEY = "your_api_key_here"
 
-* **4. Run the Agent
+
+## 4. Run the Agent
+
 ```bash
 streamlit run app.py
 
-## ⚙️ Installation & Setup
+
+
 ## 🧪 How to Test (Demo Scenario)
 This prototype is pre-configured with a **Powertrain Warranty Policy** (Section 4).
 
-1.  **Launch the App.**
-2.  **Upload `warranty_claims.csv`** (found in the `data/` folder).
+### Steps
+1.  **Launch the app.**
+2.  **Upload `warranty_claims.csv`** (located in the `data/` folder).
 3.  **Click "Run AI Audit".**
-4.  **Observe Results:**
-    * **CLM-001:** 🔴 **FLAGGED** (Turbocharger claim missing Tier 2 Approval).
-    * **CLM-002:** 🔴 **FLAGGED** (Usage of banned "Mineral Oil").
-    * **CLM-003:** 🔴 **FLAGGED** (Labor rate exceeds $120 cap).
-    * **CLM-004:** 🟢 **PASSED** (Routine maintenance).
+
+### Expected Results
+* **CLM-001:** 🔴 **FLAGGED** (Turbocharger claim missing Tier 2 Approval)
+* **CLM-002:** 🔴 **FLAGGED** (Usage of banned "Mineral Oil")
+* **CLM-003:** 🔴 **FLAGGED** (Labor rate exceeds $120 cap)
+* **CLM-004:** 🟢 **PASSED** (Routine maintenance)
 
 ## 🧠 AI Architecture
 Unlike standard chatbots, this system uses a **Context-Aware Inference** approach:
 
-1.  The system reads the raw text from `Company_Policy.pdf`.
-2.  It constructs a dynamic prompt injecting the **Policy Rules** as the "Ground Truth".
-3.  It iterates through the **CSV Ledger**, passing each transaction as a "Query".
-4.  The LLM acts as a strict auditor, returning a binary `VIOLATION` / `COMPLIANT` decision with reasoning.
+1.  The system reads raw text from `Company_Policy.pdf`.
+2.  It constructs a dynamic prompt, injecting the **policy rules** as the ground truth.
+3.  It iterates through the **CSV ledger**, passing each transaction as a query.
+4.  The LLM acts as a strict auditor, returning a binary decision:
+    * `VIOLATION`
+    * `COMPLIANT`
 
-
+Each decision includes clear reasoning for audit traceability.
 
 ## 🤝 Contributing
-Open to contributions! Please fork the repo and submit a PR.
+Contributions are welcome! 🚀
+
+Please fork the repository and submit a pull request (PR).
 
 ## 📄 License
-MIT License
+This project is licensed under the MIT License.
