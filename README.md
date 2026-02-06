@@ -34,6 +34,7 @@ Manual auditing of warranty claims is slow, error-prone, and struggles with comp
 │   └── warranty_claims.csv # The "Test Data" (Ledger)
 └── README.md              # Documentation
 
+## 📂 Project Structure
 ## ⚙️ Installation & Setup
 
 ### 1. Clone the Repository
